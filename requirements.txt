@@ -1,0 +1,135 @@
+# AALabelPP - Dependencias del Proyecto
+# Versión: 1.0
+# Python: 3.10+
+
+# ============================================================================
+# BASE DE DATOS
+# ============================================================================
+psycopg2-binary==2.9.9          # Driver PostgreSQL
+SQLAlchemy==2.0.23              # ORM
+pgvector==0.2.4                 # Extensión vector para PostgreSQL
+asyncpg==0.29.0                 # Driver async para PostgreSQL
+
+# ============================================================================
+# PROCESAMIENTO DE PDF
+# ============================================================================
+PyPDF2==3.0.1                   # Extracción de texto de PDFs
+pdfplumber==0.11.0              # Análisis avanzado de PDFs
+pytesseract==0.3.10             # OCR para PDFs escaneados
+pdf2image==1.16.3               # Conversión PDF a imágenes para OCR
+reportlab==4.0.7                # Generación de PDFs
+python-docx==1.1.0              # Generación de documentos Word
+
+# ============================================================================
+# MODELOS DE LENGUAJE Y EMBEDDINGS
+# ============================================================================
+openai==1.6.1                   # API OpenAI (GPT-4, embeddings)
+google-generativeai==0.3.2      # API Google Gemini
+anthropic==0.8.1                # API Claude (opcional)
+sentence-transformers==2.2.2    # Modelos de embeddings locales
+transformers==4.36.2            # Hugging Face Transformers
+torch==2.1.2                    # PyTorch (backend para transformers)
+
+# ============================================================================
+# RAG Y VECTORIZACIÓN
+# ============================================================================
+langchain==0.1.0                # Framework RAG
+langchain-community==0.0.10     # Integraciones community
+langchain-openai==0.0.2         # Integración OpenAI
+langchain-google-genai==0.0.5   # Integración Google
+llama-index==0.9.31             # Framework RAG alternativo
+chromadb==0.4.22                # Base datos vectorial
+faiss-cpu==1.7.4                # Facebook AI Similarity Search
+pinecone-client==2.2.4          # Pinecone vector DB (opcional)
+
+# ============================================================================
+# NLP Y PROCESAMIENTO DE TEXTO
+# ============================================================================
+spacy==3.7.2                    # Procesamiento de lenguaje natural
+nltk==3.8.1                     # Natural Language Toolkit
+textstat==0.7.3                 # Cálculo de métricas de legibilidad
+langdetect==1.0.9               # Detección de idioma
+deep-translator==1.11.4         # Traducción de textos
+
+# ============================================================================
+# UTILIDADES
+# ============================================================================
+python-dotenv==1.0.0            # Variables de entorno
+pydantic==2.5.3                 # Validación de datos
+tqdm==4.66.1                    # Barras de progreso
+loguru==0.7.2                   # Logging avanzado
+click==8.1.7                    # CLI
+rich==13.7.0                    # Formateo de consola
+
+# ============================================================================
+# TESTING Y CALIDAD
+# ============================================================================
+pytest==7.4.3                   # Framework de testing
+pytest-cov==4.1.0               # Cobertura de tests
+pytest-asyncio==0.23.2          # Tests asíncronos
+black==23.12.1                  # Formateo de código
+flake8==7.0.0                   # Linting
+mypy==1.7.1                     # Type checking
+pre-commit==3.6.0               # Git hooks
+
+# ============================================================================
+# WEB Y API
+# ============================================================================
+fastapi==0.108.0                # Framework web (para API futura)
+uvicorn==0.25.0                 # Servidor ASGI
+pydantic-settings==2.1.0        # Settings management
+httpx==0.26.0                   # Cliente HTTP async
+
+# ============================================================================
+# ANÁLISIS Y VISUALIZACIÓN
+# ============================================================================
+pandas==2.1.4                   # Análisis de datos
+numpy==1.26.2                   # Computación numérica
+matplotlib==3.8.2               # Visualización
+seaborn==0.13.0                 # Visualización estadística
+plotly==5.18.0                  # Gráficos interactivos
+
+# ============================================================================
+# UTILIDADES DE SISTEMA
+# ============================================================================
+schedule==1.2.0                 # Tareas programadas
+watchdog==3.0.0                 # Monitor de archivos
+python-magic==0.4.27            # Detección de tipos de archivo
+pillow==10.1.0                  # Procesamiento de imágenes
+
+# ============================================================================
+# SEGURIDAD
+# ============================================================================
+cryptography==41.0.7            # Criptografía
+bcrypt==4.1.2                   # Hashing de contraseñas
+
+# ============================================================================
+# MONITOREO Y MÉTRICAS
+# ============================================================================
+prometheus-client==0.19.0       # Métricas Prometheus
+psutil==5.9.6                   # Info de sistema
+
+# ============================================================================
+# NOTAS DE INSTALACIÓN
+# ============================================================================
+# 
+# Instalación básica:
+#   pip install -r requirements.txt
+#
+# Para desarrollo:
+#   pip install -r requirements.txt
+#   pip install -r requirements-dev.txt  (si existe)
+#
+# Para producción (minimal):
+#   Comentar secciones TESTING y ANÁLISIS
+#
+# Tesseract OCR (requerido para pytesseract):
+#   Ubuntu/Debian: sudo apt-get install tesseract-ocr tesseract-ocr-spa
+#   macOS: brew install tesseract tesseract-lang
+#   Windows: Descargar desde https://github.com/UB-Mannheim/tesseract/wiki
+#
+# PostgreSQL con pgvector:
+#   Requiere PostgreSQL 14+ con extensión pgvector instalada
+#   Ver docs/DATABASE.md para instrucciones
+#
+# ============================================================================
